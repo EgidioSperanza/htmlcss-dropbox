@@ -263,12 +263,16 @@ section .partner{
     margin-top: 150px;
 }
 
-.col-50{
-    width: 50%;
+.col-60{
+    width: 60%;
 }
 
-.col-50.col-text{
-    padding-left:50px;
+.col-40{
+    width: 40%;
+}
+
+.col-40.col-text{
+    padding:50px 0 0 50px;
 }
 /* ----ICONS---- */
 .ico-user::before{
