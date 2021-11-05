@@ -8,8 +8,23 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:link, a:visited{
+    color:#333;
+}
+
+p{
+    line-height: 25px;
+    padding: 0 0 35px;
+    font-size: 22px;
+}
+
 h1{
-    font-size: 62px;
+    font-size: 46px;
+    padding-bottom: 50px;
 }
 
 .wrapper{
@@ -21,11 +36,16 @@ h1{
     width: 1400px;
     margin: 0 auto;
     padding-top: 50px;
+    position: relative;
 }
 
 .container{
     width: 1200px;
     margin: 0 auto;
+}
+
+.row{
+    width: 100%;
 }
 
 .row::after{
@@ -42,7 +62,7 @@ h1{
     float: right;
 }
 /* ----RESET UNORDERED LIST---- */
-ul li{
+nav ul li{
     list-style: none;
     display: inline-block;
 }
@@ -56,9 +76,10 @@ nav{
     padding: 10px;
     background-color: #FFFFFF;
     min-height: 50px;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 25px;
     vertical-align: middle;
+    z-index: 1001;
 }
 
 .navbar.fl li, .logo{
@@ -72,22 +93,238 @@ nav{
 header{
     background-color: #aDD1EA;
     margin-top: 50px;
+    position: relative
 }
 
 /* ----JUMBOTRON---- */
+.jumbotron h1{
+    font-size: 62px;
+    padding-bottom: 50px;
+}
+
 .jumbo .col-text{
     width: 40%;
     padding-right: 50px;
 }
 
+.jumbo .col-text{
+    padding-right: 100px;
+}
+
 .jumbo .col-img{
     width: 60%;
+    height: 400px;
+    position: relative;
+}
+
+.trick{
+    position: absolute;
+    top: 0;
+    right: 0;
+
 }
 
 img{
     width: 100%;
 }
 
-.jumbo .col-img{
-    width: 60%;
+.jumbo .fas{
+    font-size: 30px;
+}
+
+/* ----BUSINESS PLAN---- */
+section{
+    margin-top: 150px;
+}
+
+label{
+    margin-right: 20px;
+}
+
+input{
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+
+border-radius: 50%;
+width: 20px;
+height: 20px;
+
+border: 2px solid #999;
+transition: 0.2s all linear;
+margin-right: 5px;
+
+position: relative;
+top: 4px;
+}
+
+input:checked {
+border: 6px solid #0063FF;
+}
+
+.billing{
+    margin-bottom: 20px;
+}
+
+.col-plan{
+    height: 1100px;
+}
+
+.col-enterprise, .col-plan{
+    border: 1px solid #c0c0c0;
+}
+
+.col-enterprise{
+    margin-top: 50px;
+}
+
+.col-1-3, .col-3-3, .col-2-3-central{
+    width: calc((100% - 120px)/3);
+}
+
+.col-2-3-central{
+    margin: 0 60px;
+}
+
+.col-3-4{
+width: calc((100% / 4)*3);
+}
+
+.col-3-4 h2, .col-3-4 h3{
+    margin: 20px 0 20px 20px;
+}
+
+.col-3-4 p{
+    margin: 10px 0 10px 20px;
+    font-size: 16px;
+}
+
+.col-1-4{
+    width: calc(100% / 4);
+    padding: 20px;
+}
+
+.col-1-4 .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.plan-title{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.plan-description{
+    padding: 0 30px;
+}
+
+.plan-description .price{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.plan-description .bill-time{
+    color:#385366;
+}
+
+.plan-description ul:not(.check){
+    margin: 25px 0;
+    list-style: none;
+}
+.plan-description ul li{
+    padding: 15px 0;
+}
+
+.plan-description a:link, .plan-description a:visited{
+    color: #0063FF;
+}
+
+.plan-description hr{
+    margin: 40px 0;
+    width: 20%;
+    border: 1px solid #c0c0c0;
+}
+
+.check li{
+    list-style-type: "✓ ";
+    color: #0063FF;
+    font-weight: bold;
+}
+
+.w-around{
+    color: #000;
+    font-weight: 400;
+}
+/* ----PARTNER---- */
+section .partner{
+    margin-top: 150px;
+}
+
+.col-50{
+    width: 50%;
+}
+
+.col-50.col-text{
+    padding-left:50px;
+}
+/* ----ICONS---- */
+.ico-user::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f007\0020';
+}
+
+.ico-user-plus::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f234\0020';
+    font-weight: 900;
+}
+
+.ico-team::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f1ad\0020';
+}
+
+.ico-folder::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f07b\0020';
+}
+
+.ico-pen::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f303\0020';
+}
+
+.ico-smile::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f118\0020';
+}
+
+/* ----BUTTON---- */
+.btn{
+    padding: 5px 10px;
+}
+
+.blue-btn{
+    background-color: #0063FF;
+    color: #FFFFFF;
+}
+
+div.btn{
+    margin:20px 0;
+    display: inline-block;
+}
+
+.plan-description .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.light-btn{
+    border: 1px solid #000;
+    color:#000
 }
