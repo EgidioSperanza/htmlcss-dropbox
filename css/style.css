@@ -489,11 +489,11 @@ footer{
     content: '\f57d\0020';
 }
 
-.language::after{
+/* .language::after{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: '\0020\f0de';
-}
+} */
 
 /* ----ICONS---- */
 .ico-user::before{
