@@ -383,6 +383,7 @@ section.tecnologies .col-text{
 .team-desc{
     position: relative;
     width: 40%;
+    overflow: auto;
 }
 
 .team-desc::before{
@@ -409,6 +410,7 @@ section.tecnologies .col-text{
 }
 /* ----RECLAME---- */
 .reclame{
+    min-width: 1200px;
     background-color: #add1ea;
     padding:100px calc((100% - 1200px) / 2);
 }
