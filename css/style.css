@@ -12,17 +12,6 @@ a{
     text-decoration: none;
 }
 
-a:link, a:visited{
-    color:#333;
-}
-
-a:hover:not(.btn.blue-btn){
-    background-color: #0063FF;
-    color: #FFF;
-    padding: 5px;
-    border: 1px solid #333;
-}
-
 p:not(.faq p){
     font-size: 16px;
     line-height: 32px;
@@ -30,7 +19,6 @@ p:not(.faq p){
 }
 
 nav p{
-    line-height: 25px;
     font-size: 22px;
 }
 
@@ -103,28 +91,40 @@ nav ul li{
 }
 
 /* ----NAVBAR---- */
+nav a:link, a:visited{
+    color:#333;
+}
+
+nav a:hover:not(.btn-nav.blue-btn){
+    background-color: #0063FF;
+    color: #FFF;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
 nav{
     width: 100%;
     position: fixed;
     top:0;
     left:0;
-    padding: 10px;
     background-color: #FFFFFF;
-    min-height: 50px;
+    height: 50px;
     font-size: 15px;
-    line-height: 25px;
-    vertical-align: middle;
+    line-height: 50px;
     z-index: 1001;
 }
 
 .navbar.fl li, .logo{
-    margin-right: 30px;
+    margin: 0 30px;
 }
 
 .navbar.fr li{
-    margin-left: 30px;
+    margin: 0 30px;
 }
 
+.logo img{
+    vertical-align: middle;
+}
 /* ----JUMBOTRON---- */
 .jumbotron h1{
     font-size: 62px;
@@ -484,17 +484,22 @@ footer{
     list-style: none;
 }
 
+.foo:link, .foo:visited{
+    color: #fff;
+}
+
+.foo:hover{
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #0096d3;
+    padding: 2px;
+}
+
 .language::before{
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: '\f57d\0020';
 }
-
-/* .language::after{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\0020\f0de';
-} */
 
 /* ----ICONS---- */
 .ico::before{
@@ -537,7 +542,7 @@ left:0;
 }
 
 /* ----BUTTON---- */
-.btn{
+.btn, .btn-nav{
     padding: 5px 10px;
 }
 
@@ -550,6 +555,11 @@ a.blue-btn:hover{
     background-color: #0096d3;
     color: #FFF;
     border: 1px solid #333;
+}
+
+a.btn-nav{
+    margin-bottom: 30px;
+    color: #FFFFFF;
 }
 
 a.btn{
@@ -575,7 +585,7 @@ a.btn.light-btn{
     color:#000
 }
 
-a.btn.light-btn:hover{
+a.btn.light-btn:hover, .btn-nav:hover, .show-more:hover{
     background-color: #333;
     color: #FFF;
     border: 1px solid #0063FF;
