@@ -249,7 +249,8 @@ width: calc((100% / 4)*3);
     list-style: none;
 }
 .plan-description ul li{
-    padding: 15px 0;
+    padding: 0 0 15px 25px;
+    position: relative;
 }
 
 .plan-description a:link, .plan-description a:visited, 
@@ -498,6 +499,12 @@ footer{
 } */
 
 /* ----ICONS---- */
+.ico::before{
+position: absolute;
+top:2px;
+left:0;
+}
+
 .ico-user::before{
     font-family: "Font Awesome 5 Free";
     content: '\f007\0020';
