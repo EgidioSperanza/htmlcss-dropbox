@@ -16,6 +16,13 @@ a:link, a:visited{
     color:#333;
 }
 
+a:hover:not(.btn.blue-btn){
+    background-color: #0063FF;
+    color: #FFF;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
 p:not(.faq p){
     font-size: 16px;
     line-height: 32px;
@@ -30,14 +37,6 @@ nav p{
 h1{
     font-size: 46px;
     padding-bottom: 50px;
-}
-
-h2{
-    font-size: 30px;
-}
-
-h3{
-    font-size: 20px;
 }
 
 h2, h3{
@@ -253,11 +252,6 @@ width: calc((100% / 4)*3);
     position: relative;
 }
 
-.plan-description a:link, .plan-description a:visited, 
-.affiliates a:link, .affiliates a:visited{
-    color: #0063FF;
-}
-
 hr{
     margin: 40px 0;
     width: 100px;
@@ -292,8 +286,9 @@ section.tecnologies .col-text{
     padding-bottom: 25px;
 }
 /* ----AFFILIATES---- */
-.affiliates a:link, .affiliates a:visited{
+.show-more:link, .show-more:visited{
    text-decoration: underline;
+   color:#0063FF;
 }
 
 .group-team{
@@ -551,9 +546,22 @@ left:0;
     color: #FFFFFF;
 }
 
-div.btn{
+a.blue-btn:hover{
+    background-color: #0096d3;
+    color: #FFF;
+    border: 1px solid #333;
+}
+
+a.btn{
     display: inline-block;
     margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+a.btn.light-btn{
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 .plan-description .btn{
@@ -561,13 +569,15 @@ div.btn{
     text-align: center;
 }
 
-.btn-reclame{
-    background-color: #FFF;
-    text-align: center;
-    padding: 10px 80px;
-}
-
 .light-btn{
+    background-color: #FFF;
     border: 1px solid #000;
     color:#000
+}
+
+a.btn.light-btn:hover{
+    background-color: #333;
+    color: #FFF;
+    border: 1px solid #0063FF;
+    padding: 5px 10px;
 }
