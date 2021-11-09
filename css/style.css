@@ -44,7 +44,8 @@ header{
     background-color: #aDD1EA;
     margin-top: 50px; /* NAVBAR 50PX PUSH BOTTOM HEADER */
     padding-top: 25px;
-    position: relative
+    position: relative;
+    min-width: 1400px;
 }
 
 .jumbotron{
@@ -460,6 +461,7 @@ section.tecnologies .col-text{
 footer{
     background-color: #000;
     color: #c0c0c0;
+    min-width: 1400px;
 }
 
 .sitemap{
