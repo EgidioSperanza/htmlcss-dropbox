@@ -446,30 +446,20 @@ section.tecnologies .col-text{
 footer{
     background-color: #000;
     color: #c0c0c0;
-    min-width: 1400px;
 }
 
 .sitemap{
-    width: 1400px;
+    width: 100%;
     margin: 0 auto;
     padding: 100px 0 50px;
 }
 
 .col-sitemap{
-    width: calc((100% - 160px) / 5);
-    min-height: 100px;
+    width: calc((100% - 300px) / 5);
 }
 
-.sitemap-internal{
-    margin: 0 20px;
-}
-
-.sitemap-left{
-    margin-right: 20px;
-}
-
-.sitemap-right{
-    margin-left: 20px;
+.col-sitemap{
+    margin: 0 30px;
 }
 
 .sitemap h4{
@@ -489,6 +479,10 @@ footer{
     color: #000;
     border: 1px solid #0096d3;
     padding: 2px;
+}
+
+.choose-lang{
+    margin: 0 30px;
 }
 
 .language::before{
@@ -564,6 +558,7 @@ footer{
     }
 
     .col-one-third, .col-one-third-central, .col-enterprise{
+        width: 100%;
         margin:15px;
     }
 
@@ -615,5 +610,13 @@ footer{
         height: 60px;
         padding: 20px 0;
         font-weight: 700;
+    }
+
+    .col-sitemap{
+        width: 100%;
+    }
+
+    .col-sitemap h4{
+        padding-top:15px;
     }
 }
