@@ -8,18 +8,27 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-a{
-    text-decoration: none;
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
 }
 
-p:not(.faq p){
-    font-size: 16px;
-    line-height: 32px;
-    padding-bottom: 35px;
+.container{
+    margin: 0 auto;
 }
 
-nav p{
-    font-size: 22px;
+.row::after{
+    content: "";
+    display:table;
+    clear: both;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
 }
 
 h1{
@@ -31,141 +40,175 @@ h2, h3{
     padding-bottom: 20px;
 }
 
+p:not(.faq p , nav p){
+    font-size: 15px;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+
 img{
     width: 100%;
 }
 
-.wrapper{
-    width: 100%;
-    margin: 0 auto;
+hr{
+    margin: 40px 0;
+    width: 100px;
+    border: 1px solid #c0c0c0;
 }
-
-header{
-    background-color: #aDD1EA;
-    margin-top: 50px; /* NAVBAR 50PX PUSH BOTTOM HEADER */
-    padding-top: 25px;
-    position: relative;
-    min-width: 1400px;
-}
-
-.jumbotron{
-    width: 1400px;
-    margin: 0 auto;
-    padding-top: 50px;
-    position: relative;
-}
-
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
-
-.row{
-    width: 100%;
-}
-
-.row::after{
-    content: "";
-    display:table;
-    clear: both;
-}
-
+/* ----SECTIONS SPACING---- */
 section, footer{
-    margin-top: 150px;
+    margin-top: 60px;
 }
 
-.ul{
-    text-decoration: underline;
+.spacing{
+    margin-top: 15px;
 }
-
-.fl{
-    float: left;
-}
-
-.fr{
-    float: right;
-}
-/* ----RESET UNORDERED LIST---- */
+/* --------------------------------------------------- */
+/* ----START UNORDERED LISTS VARIATIONS---- */
 nav ul li{
     list-style: none;
     display: inline-block;
+    margin: 0 15px;
 }
 
-/* ----NAVBAR---- */
-nav a:link:not(.btn-nav.blue-btn), nav a:visited:not(.btn-nav.blue-btn){
+.plan-description ul:not(.check){
+    margin: 25px 0;
+    list-style: none;
+}
+.plan-description ul li{
+    padding: 0 0 15px 25px;
+    position: relative;
+}
+
+.check li{
+    list-style-type: "✓ ";
+    color: #0063FF;
+    font-weight: bold;
+    margin-left: 20px;
+}
+/* ----END UNORDERED LISTS VARIATIONS---- */
+/* ----START ICONS---- */
+.ico::before{
+    position: absolute;
+    top:2px;
+    left:0;
+}
+    
+.ico-user::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f007\0020';
+}
+
+.ico-user-plus::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f234\0020';
+    font-weight: 900;
+}
+
+.ico-team::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f1ad\0020';
+}
+
+.ico-folder::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f07b\0020';
+}
+
+.ico-pen::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f303\0020';
+}
+
+.ico-smile::before{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f118\0020';
+}
+/* ----END ICONS---- */
+/* ----START LINKS VARIATIONS---- */
+a:not(.show-more){
+    text-decoration: none;
+}
+
+nav a:link:not(.btn-nav), nav a:visited:not(.btn-nav){
     color:#333;
 }
 
-nav a:hover:not(.btn-nav.blue-btn){
+nav a:hover:not(.btn-nav){
     background-color: #0063FF;
     color: #FFF;
     padding: 5px;
     border: 1px solid #333;
 }
 
-nav{
-    width: 100%;
-    position: fixed;
-    top:0;
-    left:0;
-    background-color: #FFFFFF;
-    min-height: 50px;
-    font-size: 15px;
-    line-height: 50px;
-    z-index: 1001;
+.buy:link, .buy:visited{
+    color: #0063FF;
 }
 
-.navbar.fl li, .logo{
-    margin: 0 30px;
+.buy:hover{
+    background-color: #0063FF;
+    color:#FFF;
+    padding:5px;
+}
+/* ----BUTTON---- */
+.btn, .btn-nav{
+    padding: 5px 10px;
 }
 
-.navbar.fr li{
-    margin: 0 30px;
+.btn{
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #FFFFFF;
 }
 
-.logo img{
-    vertical-align: middle;
-}
-/* ----JUMBOTRON---- */
-.jumbotron h1{
-    font-size: 62px;
+.btn-nav{
+    color: #FFFFFF;
 }
 
-.jumbo .col-text{
-    width: 40%;
-    padding-right: 50px;
+.blue-btn{
+    background-color: #0063FF;
+    color: #FFFFFF;
 }
 
-.jumbo .col-text{
-    padding-right: 100px;
+.blue-btn:hover{
+    background-color: #0096d3;
+    color: #FFF;
+    border: 1px solid #333;
 }
 
-.jumbo .col-img{
-    width: 60%;
-    height: 400px;
-    position: relative;
+.btn.light-btn{
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.trick{
-    position: absolute;
-    top: 0;
-    right: 0;
+.plan-description .btn{
+    display: block;
+    text-align: center;
 }
 
-.jumbo .fas{
-    font-size: 30px;
+.light-btn{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color:#000
 }
 
-/* ----BUSINESS PLAN---- */
+.btn.light-btn:hover, .btn-nav:hover, .show-more:hover{
+    background-color: #333;
+    color: #FFF;
+    border: 1px solid #0063FF;
+    padding: 5px 10px;
+}
+/* ----END BUTTONS---- */
+/* ----END LINKS VARIATIONS---- */
 /* ----START RADIOCHECK---- */
 label{
     margin-right: 20px;
 }
 
 input{
-/* ----OBSOLETE---- */
-/* -webkit-appearance: none;
--moz-appearance: none;/ */
 appearance: none;
 border-radius: 50%;
 width: 20px;
@@ -181,55 +224,62 @@ input:checked {
 border: 6px solid #0063FF;
 }
 /* ----END RADIOCHECK---- */
-
-.billing{
-    margin-bottom: 20px;
+/* ----START NAVBAR---- */
+nav p{
+    font-size: 22px;
 }
 
-.buy:link, .buy:visited{
-    color: #0063FF;
+nav{
+    width: 100%;
+    background-color: #FFFFFF;
+    min-height: 50px;
+    font-size: 15px;
+    line-height: 50px;
 }
 
-.buy:hover{
-    background-color: #0063FF;
-    color:#FFF;
-    padding:5px;
+.logo img{
+    vertical-align: middle;
+    padding-left: 15px;
+}
+/* ----END NAVBAR---- */
+/* ----START HEADER & JUMBOTRON---- */
+header{
+    background-color: #aDD1EA;
+    position: relative;
 }
 
-.col-plan{
-    height: 1100px;
+.jumbotron{
+    padding: 15px;
+    margin: 0 auto;
 }
 
-.col-enterprise, .col-plan{
+.jumbotron h1{
+    font-size: 52px;
+}
+
+.jumbo .fas{
+    font-size: 30px;
+}
+/* ----END HEADER & JUMBOTRON---- */
+/* ----BUSINESS PLAN---- */
+.col-enterprise, .col-one-third:not(.tecnologies .col-one-third), .col-one-third-central:not(.tecnologies .col-one-third-central){
     border: 1px solid #c0c0c0;
 }
 
-.col-enterprise{
-    margin-top: 50px;
-}
-
-.col-1-3, .col-3-3, .col-2-3-central{
-    width: calc((100% - 120px) / 3);
-}
-
-.col-2-3-central{
-    margin: 0 60px;
-}
-
-.col-3-4{
+.col-three-quarters{
 width: calc((100% / 4)*3);
 }
 
-.col-3-4{
+.col-three-quarters{
     padding: 20px 20px 0 20px ;
 }
 
-.col-1-4{
+.col-quarter{
     width: calc(100% / 4);
     padding: 20px;
 }
 
-.col-1-4 .btn{
+.col-quarter .btn{
     width: 100%;
     text-align: center;
 }
@@ -253,99 +303,54 @@ width: calc((100% / 4)*3);
     color:#385366;
 }
 
-.plan-description ul:not(.check){
-    margin: 25px 0;
-    list-style: none;
-}
-.plan-description ul li{
-    padding: 0 0 15px 25px;
-    position: relative;
-}
-
-hr{
-    margin: 40px 0;
-    width: 100px;
-    border: 1px solid #c0c0c0;
-}
-
-.check li{
-    list-style-type: "✓ ";
-    color: #0063FF;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
 .w-around{
     color: #000;
     font-weight: 400;
 }
 /* ----PARTNER---- */
-.col-60{
+.partner .col-img{
     width: 60%;
 }
 
-.col-40{
+.partner .col-text{
     width: 40%;
-}
-
-.col-40.col-text{
-    padding:50px 0 0 50px;
 }
 /* ----TECNOLOGIES---- */
 section.tecnologies .col-text{
-    padding-bottom: 25px;
+    margin-bottom: 15px;
 }
 /* ----AFFILIATES---- */
 .show-more:link, .show-more:visited{
-   text-decoration: underline;
    color:#0063FF;
 }
-
-.group-team{
-    padding-top:50px;
-    min-width: 1200px; /* FIX PER RENDERE TUTTO STATICO */
-}
-
-.team{
-    position: relative;
-    width: 30%;
-}
-
-.team::before{
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
-
 .team-area{
-    position: absolute;
-    top:      0;
-    left:     0;
-    bottom:   0;
-    right:    0;
+    width: 30vw;
+    height: 30vw;
 }
 
-.team-square{
-    position: relative;
-    width: 50%;
+.team-desc{
+    width: calc(100% - 60vw);
+    height: 30vw;
+    background-color: #000;
 }
 
-.team-square::before{
-    content: "";
-    display: block;
-    padding-top: 100%;
+.team-desc-text{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.team-square, .team-logo{
+    width: 15vw;
+    height: 15vw;
 }
 
 .team-logo{
-    position: absolute;
-    top:      0;
-    left:     0;
-    bottom:   0;
-    right:    0;
+    position: relative;
 }
 
 .team-logo img{
-    max-width: 60%;
+    width: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -386,26 +391,6 @@ section.tecnologies .col-text{
     background-color: #ffd600;
 }
 
-.team-desc{
-    position: relative;
-    width: 40%;
-    overflow: auto;
-}
-
-.team-desc::before{
-    content: "";
-    display: block;
-    padding-top:75%; /* 30% 40% 30% -> 40/30=100/X -> 75%*/
-}
-
-.team-desc-text{
-    position: absolute;
-    top:      0;
-    left:     0;
-    bottom:   0;
-    right:    0;
-}
-
 .designit-desc{
     background-color: #f5f5f5;
     padding: 50px;
@@ -416,9 +401,9 @@ section.tecnologies .col-text{
 }
 /* ----RECLAME---- */
 .reclame{
-    min-width: 1200px;
+    margin: 0 auto;
     background-color: #add1ea;
-    padding:100px calc((100% - 1200px) / 2);
+    padding:60px;
 }
 
 .reclame .col{
@@ -435,14 +420,14 @@ section.tecnologies .col-text{
 
 .faq{
     font-size: 16px;
-    line-height: 20px;
-    height: 80px;
+    line-height: 30px;
+    height: 90px;
     padding: 30px 0;
     font-weight: 700;
 }
 
 .faq-title{
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 .faq p{
@@ -450,7 +435,7 @@ section.tecnologies .col-text{
 }
 
 .faq span{
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 .faq span::after{
@@ -511,94 +496,124 @@ footer{
     font-weight: 900;
     content: '\f57d\0020';
 }
+/* ----START CHANGES 1200PX---- */
+@media only screen and (min-width: 1200px) {
+    .container{
+        width: 1000px;
+    }
+    
+    section, footer{
+        margin-top: 120px;
+    }
+    
+    nav{
+        position: fixed;
+        top:0;
+        left:0;
+        height: 50px;
+        z-index: 1001;
+    }
 
-/* ----ICONS---- */
-.ico::before{
-position: absolute;
-top:2px;
-left:0;
+    header{
+        margin-top: 50px; /* NAVBAR 50PX PUSH BOTTOM HEADER */
+    }    
+
+    .jumbotron{
+        width: 1200px;
+        position: relative;
+    }
+
+    .jumbo .col-text{
+        width: 40%;
+        padding-right: 50px;
+    }
+
+    .jumbo .col-img{
+        width: 60%;
+        height: 300px;
+        position: relative;
+        display: block;
+    }
+
+    .trick{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .col-one-third, .col-one-third-central{
+        width: calc((100% - 120px) / 3);
+    }
+    
+    .col-one-third:not(.tecnologies .col-one-third), .col-one-third-central:not(.tecnologies .col-one-third-central){
+        height: 1100px;
+    }
+
+    .col-one-third-central{
+        margin: 0 60px;
+    }
+    
+    .partner .col-text{
+        padding:50px 0 0 50px;
+    }
 }
+/* ----START CHANGES UNDER 1200PX---- */
+@media screen and (max-width: 1200px) {
+    .jumbo .col-img{
+        display: none;
+    }
 
-.ico-user::before{
-    font-family: "Font Awesome 5 Free";
-    content: '\f007\0020';
-}
+    .col-one-third, .col-one-third-central, .col-enterprise{
+        margin:15px;
+    }
 
-.ico-user-plus::before{
-    font-family: "Font Awesome 5 Free";
-    content: '\f234\0020';
-    font-weight: 900;
-}
+    .col-three-quarters, .col-quarter{
+        width: 100%;
+    }
 
-.ico-team::before{
-    font-family: "Font Awesome 5 Free";
-    content: '\f1ad\0020';
-}
+    .partner .col-text{
+        width: 100%;
+        padding: 0 30px;
+    }
 
-.ico-folder::before{
-    font-family: "Font Awesome 5 Free";
-    content: '\f07b\0020';
-}
+    .partner .col-img{
+        display: none;
+    }
 
-.ico-pen::before{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f303\0020';
-}
+    .partner .btn.light-btn{
+        width: 100%; 
+        text-align: center;
+    }
 
-.ico-smile::before{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: '\f118\0020';
-}
+    .team-area{
+        width: 100vw;
+        height: 25vw;
+    }
+    
+    .team-desc{
+        width: 100vw;
+        height: auto;
+    }
+    
+    .team-square, .team-logo{
+        width: calc(99vw / 4);
+        height: 25vw;
+    }
+    
+    .reclame .col{
+        width: 100%;
+    }
+    
+    .reclame .btn.light-btn{
+        width: 100%;
+        text-align: center;
+    }
 
-/* ----BUTTON---- */
-.btn, .btn-nav{
-    padding: 5px 10px;
-}
-
-.blue-btn{
-    background-color: #0063FF;
-    color: #FFFFFF;
-}
-
-a.blue-btn:hover{
-    background-color: #0096d3;
-    color: #FFF;
-    border: 1px solid #333;
-}
-
-a.btn-nav{
-    margin-bottom: 30px;
-    color: #FFFFFF;
-}
-
-a.btn{
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #FFFFFF;
-}
-
-a.btn.light-btn{
-    display: inline-block;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.plan-description .btn{
-    width: 100%;
-    text-align: center;
-}
-
-.light-btn{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color:#000
-}
-
-a.btn.light-btn:hover, .btn-nav:hover, .show-more:hover{
-    background-color: #333;
-    color: #FFF;
-    border: 1px solid #0063FF;
-    padding: 5px 10px;
+    .faq{
+        font-size: 12px;
+        line-height: 20px;
+        height: 60px;
+        padding: 20px 0;
+        font-weight: 700;
+    }
 }
