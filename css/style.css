@@ -491,8 +491,8 @@ footer{
     font-weight: 900;
     content: '\f57d\0020';
 }
-/* ----START CHANGES 1200PX---- */
-@media only screen and (min-width: 1200px) {
+/* ----START CHANGES 1000PX---- */
+@media only screen and (min-width: 1000px) {
     .container{
         width: 1200px;
     }
@@ -552,8 +552,8 @@ footer{
         padding:50px 0 0 50px;
     }
 }
-/* ----START CHANGES UNDER 1200PX---- */
-@media screen and (max-width: 1200px) {
+/* ----START CHANGES UNDER 1000PX---- */
+@media screen and (max-width: 1000px) {
     .jumbo .col-img{
         display: none;
     }
